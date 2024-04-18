@@ -4,6 +4,7 @@ conteudo {
   display: flex;
   flex-direction: column;
 }
+/* titulo */
 .conteiner__titulo {
   margin-top: 20px;
   font-size: 20px;
@@ -11,91 +12,83 @@ conteudo {
   color: var(--preto-texto);
   font-weight: 600;
 }
-
-.conteudo__formulario {
+/* resumo */
+.conteudo__resumo {
   margin-top: 30px;
   display: flex;
   gap: 20px;
   flex-direction: column;
 }
-
-.campo {
-  border: 1px var(--azul-borda) solid;
-  height: 3.5rem;
-  background-color: var(--cinza-background);
-  padding-left: 5px;
-  outline: none;
-  border-radius: 5px;
-  width: 100%;
-  padding-right: 5px;
-  font-size: 14px;
-}
-
-.campo::placeholder {
-  opacity: 0.3;
-}
-
-.formulario__datas {
-  display: flex;
-  gap: 30px;
-}
-
-.formulario__area__texto {
-  height: 250px;
-  resize: none;
-  padding-top: 5px;
-  color: var(--preto-texto);
-}
-
-.formulario__imagem {
+/* local */
+.resumo {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 
-.texto__opcional {
+.texto {
   font-size: 14px;
   color: var(--preto-texto);
   opacity: 0.3;
 }
 
-.upload__imagem {
-  border-radius: 5px;
-  width: 64px;
-  height: 64px;
-  border: 1px var(--azul-borda) dashed;
+.descricao {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--preto-texto);
+}
+/* data e hora */
+.resumo__data__hora {
+  display: flex;
 }
 
+.data__hora {
+  width: 100%;
+}
+/* area texto */
+.resumo__area__texto {
+  height: 250px;
+  resize: none;
+  font-size: 14px;
+  width: 100%;
+  color: var(--preto-texto);
+  background-color: var(--cinza-background);
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  overflow: auto;
+}
 /* formulário anônimo */
-.formulario__anonimo {
+.resumo__anonimo {
   display: flex;
   gap: 12px;
   align-items: center;
 }
 
-.formulario__anonimo__texto {
+.resumo__anonimo__texto {
   font-size: 14px;
   font-weight: 500;
 }
-
-.upload__imagem__label {
-  width: 100%;
-  height: 100%;
+/* imagens */
+.resumo__imagens {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+  gap: 7px;
+  flex-wrap: wrap;
 }
 
+.imagem {
+  border-radius: 5px;
+  width: 64px;
+}
 /* botao anonimo */
-.formulario__anonimo__botao {
+.resumo__anonimo__botao {
   position: relative;
   display: inline-block;
   width: 46px;
   height: 28px;
 }
 
-.formulario__anonimo__botao input {
+.resumo__anonimo__botao input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -146,9 +139,8 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
 /* botoes */
-.formulario__botoes {
+.resumo__botoes {
   display: flex;
   flex-direction: column;
   gap: 10px;
