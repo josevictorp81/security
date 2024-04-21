@@ -1,5 +1,9 @@
 @import url('./variaveis.css');
 
+.conteiner__conteudo {
+  display: none;
+}
+
 conteudo {
   display: flex;
   flex-direction: column;
@@ -11,6 +15,24 @@ conteudo {
   text-align: center;
   color: var(--preto-texto);
   font-weight: 600;
+}
+/* denuncia com sucesso */
+.denucia__sucesso {
+  max-width: 540px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cinza-background);
+}
+
+.denuncia__texto {
+  font-size: 24px;
+  font-weight: 600;
+  width: 50%;
+  text-align: center;
 }
 /* resumo */
 .conteudo__resumo {
