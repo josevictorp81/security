@@ -14,25 +14,24 @@ conteudo {
 }
 
 .nome__status {
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   padding: 0 5px 0 5px;
+}
+/* escolas */
+.conteudo__contato {
   margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  height: 100%;
 }
 
 .nome__status span {
   color: var(--preto-texto);
   font-size: 14px;
   font-weight: 600;
-}
-
-/* escolas */
-.conteudo__escolas {
-  margin-top: 20px;
-  display: flex;
-  gap: 20px;
-  flex-direction: column;
-  height: 100%;
 }
 
 .texto {
@@ -43,31 +42,29 @@ conteudo {
 
 /* lista de escolas */
 
-.conteudo__lista__escolas {
+.conteudo__lista__contato {
   overflow: auto;
 }
 
-.escolas {
+.contatos {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.escola {
+
+.contato {
   height: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 5px 0 5px;
-  background-color: white;
+
   border-radius: 5px;
 }
 
-/* status seguro */
-.status__seguro {
-  color: var(--verde);
+.contato_fundo__branco {
+  background-color: #fff;
 }
-/* status alerta vermelho */
-.status__alerta {
-  color: #fff;
-  background-color: var(--vermelho);
+.contato_fundo__cinza {
+  background-color: var(--cinza-background);
 }
