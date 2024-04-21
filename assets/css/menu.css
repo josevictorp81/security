@@ -1,0 +1,59 @@
+@import url('./variaveis.css');
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+}
+.conteiner__titulo {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  color: var(--preto-texto);
+  font-weight: 600;
+}
+
+.conteudo__botoes {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.botao {
+  height: 10rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.botao__conteiner {
+  background-color: var(--azul-botao);
+}
+
+.botao__conteiner__texto {
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.botao__conteiner__sair {
+  background-color: #fff;
+  border: 1px var(--azul-botao) solid;
+}
+
+.botao__conteiner__texto__alerta {
+  background-color: var(--vermelho);
+}
+
+.botao__conteiner__texto__sair {
+  color: var(--azul-botao);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.botao__conteiner__img {
+  height: 60px;
+}
