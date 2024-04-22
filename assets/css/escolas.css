@@ -42,8 +42,8 @@ conteudo {
 }
 
 /* lista de escolas */
-
 .conteudo__lista__escolas {
+  height: 800px;
   overflow: auto;
 }
 
