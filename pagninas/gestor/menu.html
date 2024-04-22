@@ -16,12 +16,9 @@
           Menu
         </h2>
 
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-        
-          <!-- Modal content -->
+        <!-- modal -->
+        <div id="meuModal" class="modal">
           <div class="modal__conteudo">
-            
             <div class="modal__textos">
               <span class="titulo">
                 Deseja acionar o alerta vermelho?
@@ -32,13 +29,13 @@
 
               <div class="botoes__modal">
                 <span class="botoes">SIM</span>
-                <span class="botoes cancelar">NÃO</span>
+                <span class="botoes cancelar" id="fechar">NÃO</span>
               </div>
             </div>
           </div>
         
         </div>
-
+        <!-- menu -->
         <div class="conteudo__botoes">
           <div class="botao botao__conteiner">
             <img src="../../assets/img/denucias.png" class="botao__conteiner__img" alt="">
@@ -50,7 +47,7 @@
             <span class="botao__conteiner__texto">Contatos</span>
           </div>
 
-          <div class="botao botao__conteiner__texto__alerta" id="myBtn">
+          <div class="botao botao__conteiner__texto__alerta" id="botaoAlertaVermelho">
             <img src="../../assets/img/alerta_vermelho.png" class="botao__conteiner__img" alt="">
             <span class="botao__conteiner__texto">Alerta Vermelho</span>
           </div>
@@ -64,33 +61,7 @@
     </div>
   </div>
 
-  <script>
-    // Get the modal
-    var modal = document.getElementById("myModal")
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn")
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0]
-
-    // When the user clicks the button, open the modal 
-    btn.onclick = function () {
-      modal.style.display = "block"
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-      modal.style.display = "none"
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none"
-      }
-    }
-  </script>
+  <script src="../../assets/js/menu_modal.js"></script>
 </body>
 
 </html>
