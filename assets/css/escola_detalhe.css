@@ -49,3 +49,19 @@ conteudo {
 .alerta__vermelho {
   color: var(--vermelho);
 }
+
+.botao__voltar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.botoes {
+  height: 3rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: var(--azul-botao);
+  color: #fff;
+  margin-top: 20px;
+}

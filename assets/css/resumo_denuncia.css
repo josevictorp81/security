@@ -1,7 +1,7 @@
 @import url('./variaveis.css');
 
 .conteiner__conteudo {
-  display: none;
+  display: flex; /* mudar quando enviar denuncia para none*/
 }
 
 conteudo {
@@ -21,7 +21,7 @@ conteudo {
   max-width: 540px;
   width: 100%;
   height: 100vh;
-  display: flex;
+  display: none; /* mudar quando enviar denuncia para flex*/
   flex-direction: column;
   justify-content: center;
   align-items: center;

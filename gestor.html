@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GUARD</title>
-  <link rel="stylesheet" href="../../assets/css/menu.css">
+  <link rel="stylesheet" href="./assets/css/menu.css">
 </head>
 
 <body>
@@ -38,22 +38,22 @@
         <!-- menu -->
         <div class="conteudo__botoes">
           <div class="botao botao__conteiner">
-            <img src="../../assets/img/denucias.png" class="botao__conteiner__img" alt="">
+            <img src="./assets/img/denucias.png" class="botao__conteiner__img" alt="">
             <span class="botao__conteiner__texto">Bullying</span>
           </div>
 
           <div class="botao botao__conteiner">
-            <img src="../../assets/img/contato.png" class="botao__conteiner__img contato" alt="">
+            <img src="./assets/img/contato.png" class="botao__conteiner__img contato" alt="">
             <span class="botao__conteiner__texto">Contatos</span>
           </div>
 
           <div class="botao botao__conteiner__texto__alerta" id="botaoAlertaVermelho">
-            <img src="../../assets/img/alerta_vermelho.png" class="botao__conteiner__img" alt="">
+            <img src="./assets/img/alerta_vermelho.png" class="botao__conteiner__img" alt="">
             <span class="botao__conteiner__texto">Alerta Vermelho</span>
           </div>
 
-          <div class="botao botao__conteiner__sair">
-            <img src="../../assets/img/sair.png" class="botao__conteiner__img" alt="">
+          <div class="botao botao__conteiner__sair" onclick="logout()">
+            <img src="./assets/img/sair.png" class="botao__conteiner__img" alt="">
             <span class="botao__conteiner__texto__sair">Sair</span>
           </div>
         </div>
@@ -61,7 +61,22 @@
     </div>
   </div>
 
-  <script src="../../assets/js/menu_modal.js"></script>
+  <script src="./assets/js/logout.js"></script>
+  <script>
+    var modal = document.getElementById('meuModal')
+    var btn = document.getElementById('botaoAlertaVermelho')
+    var span = document.getElementById('fechar')
+
+    // observa o click alerta vermelho
+    btn.onclick = function () {
+      modal.style.display = 'block'
+    }
+
+    // // observa o click no não
+    span.onclick = function () {
+      modal.style.display = 'none'
+    }
+  </script>
 </body>
 
 </html>

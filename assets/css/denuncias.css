@@ -64,6 +64,6 @@
   color: var(--laranja);
 }
 
-.status_encerrado {
-  color: var(--vermelho);
+.status_resolvido {
+  color: var(--verde);
 }
