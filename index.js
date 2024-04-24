@@ -18,7 +18,7 @@ window.addEventListener('load', (event) => {
       endereco: 'Exemplo, exemplo 129123',
       contato_1: '12312321312',
       contato_2: '123123',
-      status: 'seguro',
+      status: 'Seguro',
     }
 
     localStorage.setItem('escolas', JSON.stringify([escola]))

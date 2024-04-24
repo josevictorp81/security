@@ -1,5 +1,5 @@
 function voltar() {
-  localStorage.removeItem('verDenunciaid')
+  localStorage.removeItem('escolaId')
   setTimeout(() => {
     window.location.href = './escolas.html'
   }, 500)
@@ -23,7 +23,7 @@ function lerEscolaId() {
   contato1.innerText = escola.contato_1
   contato2.innerText = escola.contato_2
 
-  if (escola.status === 'seguro') {
+  if (escola.status === 'Seguro') {
     status.classList.add('seguro')
   } else {
     status.classList.add('alerta__vermelho')

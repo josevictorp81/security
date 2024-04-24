@@ -71,3 +71,17 @@ conteudo {
   color: #fff;
   background-color: var(--vermelho);
 }
+
+.sair {
+  margin-top: 15px;
+  height: 3rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: var(--azul-botao);
+  color: #fff;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
