@@ -67,3 +67,16 @@ conteudo {
 .contato_fundo__cinza {
   background-color: var(--cinza-background);
 }
+
+.voltar {
+  margin-top: 15px;
+  height: 3rem;
+  font-weight: 600;
+  border-radius: 30px;
+  background-color: var(--azul-botao);
+  color: #fff;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
