@@ -74,10 +74,10 @@ function criaUsuario(escola_id) {
   let usuariosLista = [
     {
       id: criaId(),
-      email: 'aluno1@email.com',
-      senha: 'aluno1senha',
+      email: 'aluno@email.com',
+      senha: 'alunosenha',
       perfil: 'aluno',
-      nome: 'aluno1',
+      nome: 'aluno',
       escola_id,
     },
     {
@@ -158,80 +158,3 @@ function criaId() {
 
   return id
 }
-
-/**
- * @returns [Array] Retorna os contatos cadastrados
- * { nome: 'Exemplo', numero: 1290 }
- */
-
-// function retornaContatos() {
-//   const contatos = localStorage.getItem('contatos')
-
-//   return contatos ? JSON.parse(contatos) : []
-// }
-
-/**
- *
- * @returns [Array] Retorna as denúncias cadastradas
- * { local: 'Igreja', data: '12/10/2024', hora: '08:00', descricao: 'Isso é um exemplo', tipo_de_denuncia: 'vandalismo', anonimo: false, nome_aluno: '', status: 'aberto', escola_id: 1 }
- */
-// function retornaDenuncias() {
-//   const denuncias = localStorage.getItem('denuncias')
-
-//   return denuncias ? JSON.parse(denuncias) : []
-// }
-
-/**
- * Finaliza uma denúncia, modificando o status para encerrada.
- * @param {Number} id
- */
-
-// function finalizarDenuncia(id) {
-//   let denuncias = retornaDenuncias()
-
-//   denuncias = denuncias.map((denuncia) => {
-//     if (denuncia.id === id) {
-//       denuncia.status = 'encerrada'
-//       return denuncia
-//     }
-
-//     return denuncia
-//   })
-
-//   localStorage.removeItem('denuncias')
-
-//   localStorage.setItem('denuncias', JSON.stringify(denuncias))
-// }
-
-/**
- * @returns [Array] Retorna as escolas cadastradas
- * { nome: 'Exemplo', numero: 1290 }
- */
-
-// function retornaEscolas() {
-//   const escolas = localStorage.getItem('escolas')
-
-//   return escolas ? JSON.parse(escolas) : []
-// }
-
-/**
- * Adiciona estado de alerta para escola
- * @param {Number} id
- */
-
-// function adicionaEstadoDeAlerta(gestorId) {
-//   let escolas = retornaEscolas()
-
-//   escolas = escolas.map((escola) => {
-//     if (escola.id === gestorId) {
-//       escola.status = 'Alerta vermelho'
-//       return escola
-//     }
-
-//     return escola
-//   })
-
-//   localStorage.removeItem('escolas')
-
-//   localStorage.setItem('escolas', JSON.stringify(escolas))
-// }

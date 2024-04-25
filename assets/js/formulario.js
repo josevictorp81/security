@@ -34,7 +34,6 @@ function formulario() {
     nome_aluno,
   }
 
-  console.log(novaDenuncia)
   localStorage.removeItem('novaDenuncia')
   localStorage.setItem('novaDenuncia', JSON.stringify(novaDenuncia))
 
