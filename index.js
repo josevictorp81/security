@@ -1,7 +1,9 @@
 window.addEventListener('load', (event) => {
   const id = localStorage.getItem('id')
-  let escola = localStorage.getItem('escolas')
+  var escola = localStorage.getItem('escolas')
   let logado = localStorage.getItem('logado')
+  let usuarios = localStorage.getItem('usuarios')
+  let contatos = localStorage.getItem('contatos')
 
   if (logado) {
     redirecionar(JSON.parse(logado))
@@ -24,8 +26,12 @@ window.addEventListener('load', (event) => {
     localStorage.setItem('escolas', JSON.stringify([escola]))
   }
 
-  criaContatos()
-  criaUsuario(escola.id)
+  if (!usuarios) {
+    criaUsuario(escola.id)
+  }
+  if (!contatos) {
+    criaContatos()
+  }
 })
 
 /**
@@ -57,6 +63,7 @@ function login() {
   )
 
   if (encontrado) {
+    localStorage.setItem('logado', JSON.stringify(encontrado))
     redirecionar(encontrado)
   }
 }
@@ -91,16 +98,14 @@ function criaUsuario(escola_id) {
     },
   ]
 
-  if (!usuarios) {
+  if (!JSON.parse(usuarios)) {
     localStorage.setItem('usuarios', JSON.stringify(usuariosLista))
     return
   }
 
   usuarios = JSON.parse(usuarios)
   usuarios.push(usuarios)
-
   localStorage.removeItem('usuarios')
-
   localStorage.setItem('usuarios', JSON.stringify(usuarios))
 }
 
@@ -132,15 +137,16 @@ function criaContatos() {
   localStorage.setItem('contatos', JSON.stringify(contatos))
 }
 
-/**
- * @returns [Array] Retorna os contatos cadastrados
- * { nome: 'Exemplo', numero: 1290 }
- */
-
-function retornaContatos() {
-  const contatos = localStorage.getItem('contatos')
-
-  return contatos ? JSON.parse(contatos) : []
+function redirecionar(usuario) {
+  if (usuario.perfil === 'aluno') {
+    document.location.href = './denuncias.html'
+  }
+  if (usuario.perfil === 'gestor') {
+    document.location.href = './gestor.html'
+  }
+  if (usuario.perfil === 'autoridade') {
+    document.location.href = './escolas.html'
+  }
 }
 
 function criaId() {
@@ -154,80 +160,78 @@ function criaId() {
 }
 
 /**
+ * @returns [Array] Retorna os contatos cadastrados
+ * { nome: 'Exemplo', numero: 1290 }
+ */
+
+// function retornaContatos() {
+//   const contatos = localStorage.getItem('contatos')
+
+//   return contatos ? JSON.parse(contatos) : []
+// }
+
+/**
  *
  * @returns [Array] Retorna as denúncias cadastradas
  * { local: 'Igreja', data: '12/10/2024', hora: '08:00', descricao: 'Isso é um exemplo', tipo_de_denuncia: 'vandalismo', anonimo: false, nome_aluno: '', status: 'aberto', escola_id: 1 }
  */
-function retornaDenuncias() {
-  const denuncias = localStorage.getItem('denuncias')
+// function retornaDenuncias() {
+//   const denuncias = localStorage.getItem('denuncias')
 
-  return denuncias ? JSON.parse(denuncias) : []
-}
+//   return denuncias ? JSON.parse(denuncias) : []
+// }
 
 /**
  * Finaliza uma denúncia, modificando o status para encerrada.
  * @param {Number} id
  */
 
-function finalizarDenuncia(id) {
-  let denuncias = retornaDenuncias()
+// function finalizarDenuncia(id) {
+//   let denuncias = retornaDenuncias()
 
-  denuncias = denuncias.map((denuncia) => {
-    if (denuncia.id === id) {
-      denuncia.status = 'encerrada'
-      return denuncia
-    }
+//   denuncias = denuncias.map((denuncia) => {
+//     if (denuncia.id === id) {
+//       denuncia.status = 'encerrada'
+//       return denuncia
+//     }
 
-    return denuncia
-  })
+//     return denuncia
+//   })
 
-  localStorage.removeItem('denuncias')
+//   localStorage.removeItem('denuncias')
 
-  localStorage.setItem('denuncias', JSON.stringify(denuncias))
-}
+//   localStorage.setItem('denuncias', JSON.stringify(denuncias))
+// }
 
 /**
  * @returns [Array] Retorna as escolas cadastradas
  * { nome: 'Exemplo', numero: 1290 }
  */
 
-function retornaEscolas() {
-  const escolas = localStorage.getItem('escolas')
+// function retornaEscolas() {
+//   const escolas = localStorage.getItem('escolas')
 
-  return escolas ? JSON.parse(escolas) : []
-}
+//   return escolas ? JSON.parse(escolas) : []
+// }
 
 /**
  * Adiciona estado de alerta para escola
  * @param {Number} id
  */
 
-function adicionaEstadoDeAlerta(id) {
-  let escolas = retornaEscolas()
+// function adicionaEstadoDeAlerta(gestorId) {
+//   let escolas = retornaEscolas()
 
-  escolas = escolas.map((escola) => {
-    if (escola.id === id) {
-      escola.status = 'perigo'
-      return escola
-    }
+//   escolas = escolas.map((escola) => {
+//     if (escola.id === gestorId) {
+//       escola.status = 'Alerta vermelho'
+//       return escola
+//     }
 
-    return escola
-  })
+//     return escola
+//   })
 
-  localStorage.removeItem('escolas')
+//   localStorage.removeItem('escolas')
 
-  localStorage.setItem('escolas', JSON.stringify(escolas))
-}
-
-function redirecionar(usuario) {
-  localStorage.setItem('logado', JSON.stringify(usuario))
-  if (usuario.perfil === 'aluno') {
-    document.location.href = './denuncias.html'
-  }
-  if (usuario.perfil === 'gestor') {
-    document.location.href = './gestor.html'
-  }
-  if (usuario.perfil === 'autoridade') {
-    document.location.href = './escolas.html'
-  }
-}
+//   localStorage.setItem('escolas', JSON.stringify(escolas))
+// }

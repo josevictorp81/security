@@ -3,6 +3,16 @@
  * @param {Object} denuncia { local: 'Igreja', data: '12/10/2024', hora: '08:00', descricao: 'Isso é um exemplo', tipo_de_denuncia: 'vandalismo', anonimo: false, nome_aluno: '', escola_id: 1 }
  */
 
+function criaId() {
+  const id = parseInt(localStorage.getItem('id')) + 1
+
+  localStorage.removeItem('id')
+
+  localStorage.setItem('id', id)
+
+  return id
+}
+
 var denuncia
 
 function lerNovaDenuncia() {
@@ -26,7 +36,8 @@ function lerNovaDenuncia() {
 function denunciar() {
   let denuncias = localStorage.getItem('denuncias')
 
-  denuncia.status = 'aberto' // na criação sempre adiciona o status de aberto para denúncia
+  denuncia.status = 'Aberto' // na criação sempre adiciona o status de aberto para denúncia
+  denuncia.id = criaId()
 
   if (!denuncias) {
     localStorage.setItem('denuncias', JSON.stringify([]))

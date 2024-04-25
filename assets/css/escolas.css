@@ -43,7 +43,7 @@ conteudo {
 
 /* lista de escolas */
 .conteudo__lista__escolas {
-  height: 800px;
+  height: 650px;
   overflow: auto;
 }
 

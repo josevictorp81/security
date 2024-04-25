@@ -44,6 +44,7 @@ conteudo {
 
 .conteudo__lista__contato {
   overflow: auto;
+  height: 650px;
 }
 
 .contatos {

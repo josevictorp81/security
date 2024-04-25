@@ -36,7 +36,7 @@
 
 .conteudo__denuncias__lista {
   margin-top: 6px;
-  height: 800px;
+  height: 650px;
   overflow: auto;
 }
 
@@ -66,4 +66,18 @@
 
 .status_resolvido {
   color: var(--verde);
+}
+
+.voltar {
+  margin-top: 15px;
+  height: 3rem;
+  font-weight: 600;
+  border-radius: 30px;
+  background-color: var(--cinza-background);
+  color: var(--azul-botao);
+  border: 1px var(--azul-borda) solid;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

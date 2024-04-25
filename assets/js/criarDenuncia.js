@@ -14,7 +14,6 @@ function criaId() {
 
 function criaDenuncia(tipo_de_denuncia) {
   let novaDenuncia = {
-    id: criaId(),
     local: '',
     data: new Date(),
     hora: '',
@@ -25,8 +24,8 @@ function criaDenuncia(tipo_de_denuncia) {
     escola_id: 1,
   }
 
-  console.log(novaDenuncia)
-
   localStorage.setItem('novaDenuncia', JSON.stringify(novaDenuncia))
-  window.location.href = './formulario.html'
+  setTimeout(() => {
+    window.location.href = './formulario.html'
+  }, 500)
 }
