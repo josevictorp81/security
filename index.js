@@ -17,7 +17,7 @@ window.addEventListener('load', (event) => {
     escola = {
       id: criaId(),
       nome: 'CETI RAIMUNDO ANDRADE',
-      endereco: 'Exemplo, exemplo 129123',
+      endereco: 'R. São Paulo - Centro, Campo Maior - PI, 64280-000',
       contato_1: '12312321312',
       contato_2: '123123',
       status: 'Seguro',
@@ -74,10 +74,10 @@ function criaUsuario(escola_id) {
   let usuariosLista = [
     {
       id: criaId(),
-      email: 'aluno@email.com',
+      email: 'joaocleber@email.com',
       senha: 'alunosenha',
       perfil: 'aluno',
-      nome: 'aluno',
+      nome: 'João Cleber',
       escola_id,
     },
     {
